@@ -16,7 +16,8 @@ public class Program
 	public void TempCheck(){
 		
 		int tempInput = Convert.ToInt32(Console.ReadLine());
-	
+		
+			// ended up needing to lookup how to convert user input into an "int" to be able to compare it against my x variable
 		
 		var x = 30; 
 		
