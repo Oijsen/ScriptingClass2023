@@ -25,37 +25,37 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveDirection;
     private bool _isJumping = false;
 
+    private bool _isOnGround;
+
+ 
+
     void Start()
     {
         _controller = GetComponent<CharacterController>();
         
     }
 
+
     void Update()
     {
 
 
-         if (_controller.isGrounded){
-            
-            // Reset jump state when grounded
-            _isJumping = false;
-            
-
-            if (Input.GetButtonDown("Jump")){
-            
-                // Apply jump force
-                _moveDirection.y = jumpForce;
-
-                _isJumping = true; // Set to true when jumping
-                
-            }
-            else
-            {
-                // Apply gravity when not grounded
-                _moveDirection.y -= gravity * Time.deltaTime; // Use the serialized gravity value
-            }
-        }
+        if (Input.GetButtonDown("Jump")){
         
+            // Apply jump force
+            _moveDirection.y = jumpForce;
+            Debug.Log ("Jump Attempt");
+
+            _isJumping = true; // Set to true when jumping
+            _isOnGround = false;
+        }
+        else
+        {
+            // Apply gravity when not grounded
+            _moveDirection.y -= gravity * Time.deltaTime; // Use the serialized gravity value
+        }
+
+    
     
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -85,6 +85,15 @@ public class PlayerController : MonoBehaviour
             sprintStamina -= sprintDepletionRate * Time.deltaTime;
         }
     
+        void OnCollisionEnter(Collision other)
+        {   //Checks if the player is on the ground
+            if(other.gameObject.CompareTag("Enemy"))
+            {
+                _isOnGround = true;
+                Debug.Log("Attack");
+            }
+        }
+
 
         bool CanSprint()
         {
