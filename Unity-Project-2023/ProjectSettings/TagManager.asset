@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Object
   - Chest
+  - Projectile
   layers:
   - Default
   - TransparentFX

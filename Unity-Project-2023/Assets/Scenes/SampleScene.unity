@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &217896904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5544064709428493803, guid: 6752fa4b540118a4a9289431c3a171b1, type: 3}
+  m_PrefabInstance: {fileID: 2967283924454826440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &217896910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217896904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c91e15a19c2a4a45a4a8f5cc94b315f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +403,8 @@ Transform:
   m_LocalPosition: {x: 2.078, y: 1.1, z: -3.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2019860254}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &848250364
@@ -625,6 +644,116 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1637688780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 581623757507390805, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686329189530056900, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_Name
+      value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183565084526550623, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183565084526550623, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
+--- !u!1 &2019860253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019860254}
+  - component: {fileID: 2019860255}
+  m_Layer: 0
+  m_Name: Laser Spawn Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019860254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019860253}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 848250363}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019860255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019860253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe599cf8db73c043babdb0df1b6d395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser: {fileID: 2686329189530056900, guid: 66363461bf1659044a1ee1688b348f41, type: 3}
 --- !u!1001 &2534890425201211683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,10 +863,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5544064709428493803, guid: 6752fa4b540118a4a9289431c3a171b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 217896910}
   m_SourcePrefab: {fileID: 100100000, guid: 6752fa4b540118a4a9289431c3a171b1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -750,3 +883,4 @@ SceneRoots:
   - {fileID: 2967283924454826440}
   - {fileID: 2534890425201211683}
   - {fileID: 724796107}
+  - {fileID: 1637688780}

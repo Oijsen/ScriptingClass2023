@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PreFabMovement : MonoBehaviour
+public class EnemyPreFabMovement : MonoBehaviour
 {
     public float speed = 3.2f;
 
@@ -21,13 +21,28 @@ public class PreFabMovement : MonoBehaviour
 
         if (transform.position.z < bottomBoundary)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
+        
+        
 
         if (transform.position.z > topBoundary)
         {
 
             Destroy(gameObject);
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+        
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
     }
 }
