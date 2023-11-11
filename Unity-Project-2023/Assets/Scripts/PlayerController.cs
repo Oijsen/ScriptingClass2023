@@ -1,4 +1,4 @@
-using System.Collections;
+/* using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         {   //Checks if the player is on the ground
             if(other.gameObject.CompareTag("Enemy"))
             {
-                _isOnGround = true;
+            
                 Debug.Log("Attack");
             }
         }
@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+*/
 
 
 
