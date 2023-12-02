@@ -9,6 +9,8 @@ public class EnemyPreFabMovement : MonoBehaviour
     private float topBoundary = 7;
 
     private float bottomBoundary = -5; 
+
+    public int Points = 0;
     void Start()
     {
         
@@ -39,10 +41,13 @@ public class EnemyPreFabMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Projectile"))
         {
-        
+            Debug.Log("Enemy Destroyed!");
+            Points = Points + 5; 
+            Debug.Log("You have " + Points + " points!");
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        
 
     }
 }

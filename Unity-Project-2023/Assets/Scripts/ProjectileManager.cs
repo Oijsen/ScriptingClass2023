@@ -6,13 +6,13 @@ public class ProjectileManager : MonoBehaviour
 {
 
     public GameObject laser; 
-    private Vector3 gun;
 
+    public Transform gun;
 
     // Start is called before the first frame update
     void Start()
     {
-        gun = new Vector3(0f, 1.1f, 0f);
+        //gun = new Vector3(0f, 1.1f, 0f);
         InvokeRepeating("Fire", 1.0f, 0.5f);
     }
 
@@ -24,7 +24,7 @@ public class ProjectileManager : MonoBehaviour
 
     void Fire() 
     {
-        Instantiate(laser, gun, Quaternion.Euler(90, 0, 0));
+        Instantiate(laser, gun.position, Quaternion.Euler(90, 0, 0));
 
     }
 }
