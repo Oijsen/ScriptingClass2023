@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollectItem : MonoBehaviour
 {
 
-private int Points = 0;
+public int Points = 0;
 
     // Start is called before the first frame update
     void Start()
