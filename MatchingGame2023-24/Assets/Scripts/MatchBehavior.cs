@@ -22,7 +22,10 @@ public class MatchBehavior : IDContainerBehaviour
         {
             noMatchEvent.Invoke();
             yield return new WaitForSeconds(0.5f);
+            UnityEditor.EditorApplication.isPlaying = false;
+            /*yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
+            */
         }
     }
 
