@@ -18,7 +18,7 @@ public class CoroutineBehaviour : MonoBehaviour
         wffuObj = new WaitForFixedUpdate();
         startEvent.Invoke();
     }
-
+    
     public void StartCounting()
     {
         StartCoroutine(Counting());
